@@ -1,16 +1,12 @@
+import functional_interface.MyFunction;
+
 import java.util.function.Function;
 
 public class Main {
     public static void main(String[] args) {
-        Function<String, Integer> toInt = new Function<String, Integer>() {
-            @Override
-            public Integer apply(String s) {
-                return Integer.parseInt(s);
-            }
-        };
+        MyFunction myFunction = new MyFunction();
 
-        Integer number = toInt.apply("100");
-        System.out.println("number: " + number);
-
+        String result = myFunction.apply(5);
+        System.out.println(result);
     }
 }
