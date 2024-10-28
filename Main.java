@@ -1,36 +1,32 @@
 import functional_interface.MyFunction;
+import stream_api.StreamEx;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class Main {
     public static void main(String[] args) {
-        // 클래스 상속 받아서 구현
-        MyFunction myFunction = new MyFunction();
+        StreamEx streamEx = new StreamEx();
 
-        String result = myFunction.apply(5);
-        System.out.println(result);
 
-        // 람다식 활용해서 구현
-        Function<Integer, String> byLambda = (Integer i) -> "Number: " + i;
+        List<Integer> arr = IntStream.range(1, 11).boxed().collect(Collectors.toList());
+        List<Integer> newArr = arr.stream().map(
+                i -> i * 2
+        ).collect(Collectors.toList());
 
-        String result2 = byLambda.apply(5);
-        System.out.println(result2);
+        arr.stream().forEach(num -> System.out.print(num + " "));
+        System.out.println();
+        newArr.stream().forEach(num -> System.out.print(num + " "));
 
-        // 익명 클래스 활용해서 구현
-        Function<Integer, String> byAnonymous = new Function<Integer, String>() {
-            @Override
-            public String apply(Integer i) {
-                return "Number: " + i;
-            }
-        };
-
-        String result3 = byAnonymous.apply(5);
-        System.out.println(result3);
-
-        // 메서드 참조로 구현
-        Function<Integer, String> byMethod = String::valueOf;
-
-        String result4 = byMethod.apply(5);
-        System.out.println("Number: " + result4);
+        System.out.println();
+        List<String> collect = arr.stream()
+                .filter(i -> i % 2 == 0)
+                .map(i -> i + " is even number")
+                .collect(Collectors.toList());
+        collect.stream().forEach(str -> System.out.println(str));
     }
 }
