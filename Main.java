@@ -8,5 +8,11 @@ public class Main {
 
         String result = myFunction.apply(5);
         System.out.println(result);
+
+        Function<Integer, String> byLambda = (Integer i) -> "Number: " + i;
+
+        String result2 = byLambda.apply(5);
+        System.out.println(result2);
+
     }
 }
