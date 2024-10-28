@@ -26,5 +26,11 @@ public class Main {
 
         String result3 = byAnonymous.apply(5);
         System.out.println(result3);
+
+        // 메서드 참조로 구현
+        Function<Integer, String> byMethod = String::valueOf;
+
+        String result4 = byMethod.apply(5);
+        System.out.println("Number: " + result4);
     }
 }
