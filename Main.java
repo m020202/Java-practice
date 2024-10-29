@@ -1,18 +1,9 @@
-import functional_interface.MyFunction;
-import stream_api.StreamEx;
-
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
-import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class Main {
     public static void main(String[] args) {
-        StreamEx streamEx = new StreamEx();
-
-
         List<Integer> arr = IntStream.range(1, 11).boxed().collect(Collectors.toList());
         List<Integer> newArr = arr.stream().map(
                 i -> i * 2
