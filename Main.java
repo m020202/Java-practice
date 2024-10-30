@@ -19,5 +19,8 @@ public class Main {
                 .map(i -> i + " is even number")
                 .collect(Collectors.toList());
         collect.stream().forEach(str -> System.out.println(str));
+
+        System.out.println();
+        collect.forEach(System.out::println);
     }
 }
