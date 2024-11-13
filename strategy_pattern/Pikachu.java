@@ -4,16 +4,16 @@ public class Pikachu implements Pokemon {
     private Attack attack;
     private Passive passive;
 
-    public Pikachu(Attack attack, Passive passive) {
-        this.attack = attack;
-        this.passive = passive;
+    public Pikachu() {
+        this.attack = new MillionVolt();
+        this.passive = new Defensibility();
     }
 
     @Override
     public void introduce() {
         name();
-        attack();
-        passive();
+        attack.motion();
+        passive.detail();
     }
 
     @Override
@@ -22,12 +22,12 @@ public class Pikachu implements Pokemon {
     }
 
     @Override
-    public void attack() {
-        attack.motion();
+    public void attack(Attack attack) {
+        this.attack = attack;
     }
 
     @Override
-    public void passive() {
-        passive.detail();
+    public void passive(Passive passive) {
+        this.passive = passive;
     }
 }

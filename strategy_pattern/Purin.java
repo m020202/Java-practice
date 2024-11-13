@@ -1,11 +1,19 @@
 package strategy_pattern;
 
 public class Purin implements Pokemon {
+    private Attack attack;
+    private Passive passive;
+
+    public Purin() {
+        attack = new MillionVolt();
+        passive = new Defensibility();
+    }
+
     @Override
     public void introduce() {
         name();
-        attack();
-        passive();
+        attack.motion();
+        passive.detail();
     }
 
     @Override
@@ -14,12 +22,12 @@ public class Purin implements Pokemon {
     }
 
     @Override
-    public void attack() {
-
+    public void attack(Attack attack) {
+        this.attack = attack;
     }
 
     @Override
-    public void passive() {
-
+    public void passive(Passive passive) {
+        this.passive = passive;
     }
 }
