@@ -5,7 +5,7 @@ public class Purin implements Pokemon {
     private Passive passive;
 
     public Purin() {
-        attack = new MillionVolt();
+        attack = new Flame();
         passive = new Defensibility();
     }
 
