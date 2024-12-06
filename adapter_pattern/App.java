@@ -2,11 +2,10 @@ package adapter_pattern;
 
 public class App {
     public static void main(String[] args) {
-        Toast toast = new DefaultToast();
+        SamsungPhone samsungPhone = new SamsungPhone();
 
-        toast = new HamToast(toast);
-        toast = new CheezeToast(toast);
+        samsungPhone.installAirPods();
 
-        toast.addTopping("");
+        samsungPhone.testAirPods();
     }
 }
