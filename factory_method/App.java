@@ -5,5 +5,10 @@ public class App {
         GameServer gameServer = new GameServer(new GameServerFactory());
         gameServer.execute("supermario");
 
+        System.out.println();
+
+        GameServerV2 gameServerV2 = new KRGameServer();
+        gameServerV2.execute("supermario");
+
     }
 }
