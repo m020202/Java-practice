@@ -1,10 +1,9 @@
 package decorator_pattern;
 
-public class Cheeze implements Toast {
-    private Toast toast;
+public class Cheeze extends ToppingDecorator {
 
     public Cheeze(Toast toast) {
-        this.toast = toast;
+        super(toast);
     }
 
     @Override

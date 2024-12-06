@@ -1,9 +1,9 @@
 package decorator_pattern;
 
-public class Ham implements Toast {
-    Toast toast;
+public class Ham extends ToppingDecorator {
     public Ham(Toast toast) {
-        this.toast = toast;
+        super(toast);
+
     }
 
     @Override
