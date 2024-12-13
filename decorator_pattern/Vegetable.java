@@ -7,11 +7,11 @@ public class Vegetable extends ToppingDecorator {
 
     @Override
     public String getName() {
-        return "야채" + super.getName();
+        return "야채" + toast.getName();
     }
 
     @Override
     public Integer getKcal() {
-        return 10 + super.getKcal();
+        return 10 + toast.getKcal();
     }
 }
