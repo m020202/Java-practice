@@ -2,7 +2,7 @@ package adapter_pattern;
 
 public class AirPods {
     public AirPods() {
-        System.out.println("새로 구입한 Apple AirPods 입니다.");
+        System.out.println("\n새로 구입한 Apple AirPods 입니다.");
     }
 
     public void playing() {
