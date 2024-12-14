@@ -9,5 +9,14 @@ public class App {
 
         System.out.println("주문한 토스트: " + toast1.getName());
         System.out.println("칼로리: " + toast1.getKcal());
+
+
+        Toast toast2 = new NormalBread();
+        toast2 = new Cheeze(toast2);
+        toast2 = new Vegetable(toast2);
+
+        System.out.println("주문한 토스트: " + toast2.getName());
+        System.out.println("칼로리: " + toast2.getKcal());
+
     }
 }
